@@ -1,0 +1,21 @@
+.organizations {
+    max-width: 900px;
+    margin: 2rem auto 0 auto;
+    background: #181a1b;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(20,20,20,0.07);
+}
+
+.organization-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.organization-item {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
