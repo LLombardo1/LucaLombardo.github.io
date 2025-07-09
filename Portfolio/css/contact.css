@@ -1,0 +1,143 @@
+.contact {
+    text-align: center;
+    padding: 6rem 0 8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ensure the two-tone background shows through */
+.contact::before {
+    z-index: -1;
+}
+
+.contact .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+.contact h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ff3b30;
+    border-radius: 3px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 auto 3rem;
+    max-width: 700px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.contact-item {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #333;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: #ff3b30;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-color: #ff3b30;
+    background: #1f1f1f;
+}
+
+.contact-item:hover::before {
+    width: 5px;
+    background: #ff3b30;
+}
+
+.contact-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.contact-item h3 svg {
+    color: #ff3b30;
+    font-size: 1.5rem;
+}
+
+.contact-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    word-break: break-all;
+    display: inline-block;
+    padding: 0.5rem 0;
+    font-weight: 300;
+}
+
+.contact-item a:hover {
+    color: #ff3b30;
+    transform: translateX(5px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact {
+        padding: 80px 0;
+    }
+    
+    .contact h2 {
+        font-size: 2rem;
+    }
+    
+    .contact p {
+        font-size: 1.1rem;
+        padding: 0 1.5rem;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    .contact-item {
+        padding: 1.5rem;
+    }
+}
